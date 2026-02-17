@@ -43,12 +43,19 @@ for (let c = 0; c < brickColumnCount; c++) {
 
 
 let isGameOver = false;
+let score = 0;
 
 function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.font = "16px Arial";
+    ctx.fillStyle = "#0095DD";
+    ctx.fillText("Score: " + score, 8, 20);
+
     bricks.forEach((brick) => {
         brick.draw(ctx);
-        brick.collides(ball);
+        if (brick.collides(ball)) {
+            score++;
+        }
     });
 
     ball.draw(ctx);

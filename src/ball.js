@@ -1,10 +1,10 @@
 import Sprite from "./sprite.js";
 
 class Ball extends Sprite {
-    constructor(x, y, width, height, color, dx, dy) {
+    /*constructor(x, y, width, height, color, dx, dy) {
         super(x, y, width, height, color, dx, dy);
-    }
-
+    }*/
+    //not needed if only calling super, no adding fields or anything, everything by default
     bounce(canvasWidth, canvasHeight) {
         if (this.x < 0 || this.x + this.width > canvasWidth) {
             // bounce off the left/right edges

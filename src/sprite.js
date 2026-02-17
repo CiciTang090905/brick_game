@@ -12,6 +12,8 @@ class Sprite extends Block { //object that able to move
         this.x += this.dx;
         this.y += this.dy;
     }
+
+    
 }
 
 export default Sprite;

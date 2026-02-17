@@ -11,8 +11,8 @@ ctx.closePath();
 
 let x = canvas.width / 2;
 let y = canvas.height - 30;
-const dx = 0.5;
-const dy = -0.5;
+const dx = 1;
+const dy = -1;
 
 function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);

@@ -68,10 +68,16 @@ function draw() {
     ball.collides(paddle);
 
     if (!isGameOver) {
-        window.requestAnimationFrame(draw);
+
+        if (score === brickRowCount * brickColumnCount) {
+            window.alert("You won!");
+        } else {
+            window.requestAnimationFrame(draw);
+        }
     } else {
         window.alert("Game over!");
     }
+
 }
 
 
